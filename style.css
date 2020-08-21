@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+    color: #605d5d
+}
+input:focus, button:focus, .area:focus, .f-family:focus{
+    outline: none;
+}
+.f-family, button {
+    cursor: pointer
+}
+
+/**********/
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.block{
+    background: #fff;
+    height: 300px;
+    margin: 15px 0;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 7px 9px 32px -30px rgba(64, 103, 103, 0.64);
+    padding: 20px;
+/*    border: 2px solid red*/
+}
+.btn{
+    padding: 5px 15px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all ease .3s;
+    border: none;
+    display: inline-block
+}
+.btn:hover{
+    color: #fff;
+}
+.btn-block{
+    text-align: center
+}
+.btn-edit{
+    background: #ffe9c1
+}
+.btn-edit:hover{
+    background: #fdc661;
+
+}
+.btn-style{
+    background: #f6d8f8
+}
+.btn-style:hover{
+    background: #eb6af5
+}
+
+
+
+/*edit*/
+.edit{
+    width: 100%;
+    height: 100%;
+/*    display: none*/
+}
+.area{
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    height: 80%;
+    border: 2px dotted lightblue
+}
+.settings-btn{
+    margin-top: 10px
+}
+.btn-add{
+    background: #ffd5d5
+}
+.btn-add:hover{
+    background: #ff8282
+}
+.btn-save{
+    background: #d3e2ff
+}
+.btn-save:hover{
+    background: #97bcf8
+}
+
+/*style*/
+.style{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    
+    display: none
+}
+.form-headers{
+    font-size: 18px;
+    margin: 5px 0;
+    font-weight: normal;
+
+}
+.style-block{
+    margin-bottom: 15px;
+}
+
+.style form label{
+    margin-right: 20px;
+    cursor: pointer
+}
+.f-family{
+    padding: 5px;
+    border: none;
+    border-left: 2px solid #f6d8f8
+}
+
+.btn-colors{
+    background: #f6d8f8;
+    margin-right: 10px;
+}
+.btn-colors:hover{
+    background: #eb6af5
+}
+
+/**/

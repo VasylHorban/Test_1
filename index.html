@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Online generation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="first-window">
+            <div class="out-block block">
+                <h1>If</h1>
+                <p>If you can keep your head when all about you</p>
+                <p>Are losing theirs and blaming it on you,</p>
+                <p>If you can trust yourself when all men doubt you,</p>
+                <p>But make allowance for their doubting too; </p>
+                <p>If you can wait and not be tired by waiting,</p>
+                <p>Or being lied about, don’t deal in lies,</p>
+                <p>And yet don’t look too good, nor talk too wise...</p>
+                <br>
+                <small>by Rudyard Kipling</small>
+            </div>
+            <div class="btn-block">
+                <button class="btn btn-edit" id="btn-edit">Edit</button>
+                <button class="btn btn-style" id="btn-style">Style</button>
+            </div>
+            <div class="settings-block block">
+                <div class="edit">
+                    <textarea class="area" id="text-area">
+
+                    </textarea>
+                    <div class="settings-btn">
+                        <button class="btn btn-add" id="btn-add">Add</button>
+                        <button class="btn btn-save" id="btn-save">Save</button>
+                    </div>
+                </div>
+                <div class="style">
+                    <form onsubmit="return false;">
+                        <div class="style-block">
+                            <h3 class="form-headers">Font size</h3>
+                            <label for="s12"><input type="radio" id="s12" name='font-size' value="12px"> 12px</label>
+                            <label for="s14"><input type="radio" id="s14" name='font-size' value="14px"> 14px</label>
+                            <label for="s16"><input type="radio" id="s16" name='font-size' value="16px"> 16px</label>
+                            <label for="s18"><input type="radio" id="s18" name='font-size' value="18px"> 18px</label>
+                            <label for="s20"><input type="radio" id="s20" name='font-size' value="20px"> 20px</label>
+                        </div>
+                        <div class="style-block">
+                            <h3 class="form-headers">Font family</h3>
+                            <select name="fonts" id="font-family" class='f-family'>
+                                <option name='fonts' selected disabled>Choose font</option>
+                                <option name='fonts' value='cursive'>Cursive</option>
+                                <option name='fonts' value='fantasy'>Fantasy</option>
+                                <option name='fonts' value='monospace'>Monospace</option>
+                                <option name='fonts' value='sans-serif'>Sans-serif</option>
+                            </select>
+                        </div>
+                        <div class="style-block">
+                            <h3 class="form-headers">Colors</h3>
+                            <button class="btn btn-colors" id="btn-t-colors">Colors for text</button>
+                            <button class="btn btn-colors" id="b-bg-colors">Background colors</button>
+                        </div>
+                        <div class="style-block">
+                            <h3 class="form-headers">Style</h3>
+                            <label for="f-bold"><input id="f-bold" class="f-wight" type="checkbox"> Bold text</label>
+                            <label for="f-cursive"><input id="f-cursive" class="f-wight" type="checkbox"> Cursive text</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
