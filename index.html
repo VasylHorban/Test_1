@@ -9,8 +9,8 @@
 
 <body>
     <div class="container">
-        <div class="first-window">
-            <div class="out-block block">
+        <div class="first-window" id="first-window">
+            <div class="out-block block" id="out">
                 <h1>If</h1>
                 <p>If you can keep your head when all about you</p>
                 <p>Are losing theirs and blaming it on you,</p>
@@ -26,8 +26,8 @@
                 <button class="btn btn-edit" id="btn-edit">Edit</button>
                 <button class="btn btn-style" id="btn-style">Style</button>
             </div>
-            <div class="settings-block block">
-                <div class="edit">
+            <div class="settings-block block" id="settings-block">
+                <div class="edit" id="edit">
                     <textarea class="area" id="text-area">
 
                     </textarea>
@@ -36,15 +36,15 @@
                         <button class="btn btn-save" id="btn-save">Save</button>
                     </div>
                 </div>
-                <div class="style">
+                <div class="style" id='style'>
                     <form onsubmit="return false;">
-                        <div class="style-block">
+                        <div class="style-block" id="font-size">
                             <h3 class="form-headers">Font size</h3>
-                            <label for="s12"><input type="radio" id="s12" name='font-size' value="12px"> 12px</label>
-                            <label for="s14"><input type="radio" id="s14" name='font-size' value="14px"> 14px</label>
-                            <label for="s16"><input type="radio" id="s16" name='font-size' value="16px"> 16px</label>
-                            <label for="s18"><input type="radio" id="s18" name='font-size' value="18px"> 18px</label>
-                            <label for="s20"><input type="radio" id="s20" name='font-size' value="20px"> 20px</label>
+                            <label for="s12"><input class='font-size-input' type="radio" id="s12" name='font-size' value="12px"> 12px</label>
+                            <label for="s14"><input class='font-size-input' type="radio" id="s14" name='font-size' value="14px"> 14px</label>
+                            <label for="s16"><input checked class='font-size-input' type="radio" id="s16" name='font-size' value="16px"> 16px</label>
+                            <label for="s18"><input class='font-size-input' type="radio" id="s18" name='font-size' value="18px"> 18px</label>
+                            <label for="s20"><input class='font-size-input' type="radio" id="s20" name='font-size' value="20px"> 20px</label>
                         </div>
                         <div class="style-block">
                             <h3 class="form-headers">Font family</h3>
@@ -59,15 +59,59 @@
                         <div class="style-block">
                             <h3 class="form-headers">Colors</h3>
                             <button class="btn btn-colors" id="btn-t-colors">Colors for text</button>
-                            <button class="btn btn-colors" id="b-bg-colors">Background colors</button>
+                            <button class="btn btn-colors" id="btn-bg-colors">Background colors</button>
+                            <div class="color-box" id="color-box"></div>
                         </div>
-                        <div class="style-block">
+                        <div class="style-block" id="font-weight">
                             <h3 class="form-headers">Style</h3>
-                            <label for="f-bold"><input id="f-bold" class="f-wight" type="checkbox"> Bold text</label>
-                            <label for="f-cursive"><input id="f-cursive" class="f-wight" type="checkbox"> Cursive text</label>
+                            <label for="f-bold"><input id="f-bold" class="font-weight" type="checkbox" value="bold"> Bold text</label>
+                            <label for="f-cursive"><input id="f-cursive" class="font-weight" type="checkbox" value="italic"> Cursive text</label>
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div id='second-window' class="second-window">
+            <div class="block">
+                <h1>Choose what you want:</h1>
+                <div class="style-block">
+                    <form>
+                        <label for="table-radio"><input name="switch" id="table-radio" type="radio" value="table"> table</label>
+                        <label for="list-radio"><input name="switch" id="list-radio" type="radio" value="list"> list</label>
+                    </form>
+                </div>
+                <div class="table" id="table">
+                    <form onsubmit='return false'>
+                       <h4>Add style to your table : </h4>
+                        <label for="count-tr">Count TR: <input id="count-tr" type="text"></label>
+                        <label for="count-td">Count TD: <input id="count-td" type="text"></label>
+                        <label for="width-td">Width of TD: <input type="text" id='width-td'></label>
+                        <label for="width-td">Width of TD: <input type="text" id='width-td'></label>
+                        <div class="border">
+                            <label for="width-border">Width of border :<input type="text" id=""></label>
+                            <label for="border-type">Type of border :<select name="type" id="border-type">
+                                <option value="solid">solid</option>
+                                <option value="dotted">dotted</option>
+                                <option value="dashed">dashed</option>
+                                <option value="double">double</option>
+                                <option value="groove">groove</option>
+                                <option value="ridge">ridge</option>
+                                <option value="inset">inset</option>
+                            </select> </label>
+                            <label for="border-color">Type of border :<select name="type" id="border-type">
+                                <option value="#3b3b3b">black</option>
+                                <option value="#ff7c7c">red</option>
+                                <option value="#fff">white</option>
+                                <option value="#ffff98">yellow</option>
+                                <option value="#b1bcfa">blue</option>
+                                <option value="#ff882c">orange</option>
+                                <option value="#a6fa92">green</option>
+                            </select> </label>
+                        </div>
+                        <button class="btn btn-create" id='btn-table'>Create table</button>
+                    </form>
+                </div>
+                <div class="list" id="list"></div>
             </div>
         </div>
     </div>
