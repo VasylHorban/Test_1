@@ -48,12 +48,12 @@
                         </div>
                         <div class="style-block">
                             <h3 class="form-headers">Font family</h3>
-                            <select name="fonts" id="font-family" class='f-family'>
-                                <option name='fonts' selected disabled>Choose font</option>
-                                <option name='fonts' value='cursive'>Cursive</option>
-                                <option name='fonts' value='fantasy'>Fantasy</option>
-                                <option name='fonts' value='monospace'>Monospace</option>
-                                <option name='fonts' value='sans-serif'>Sans-serif</option>
+                            <select id="font-family" class='f-family select'>
+                                <option selected disabled>Choose font</option>
+                                <option value='cursive'>Cursive</option>
+                                <option value='fantasy'>Fantasy</option>
+                                <option value='monospace'>Monospace</option>
+                                <option value='sans-serif'>Sans-serif</option>
                             </select>
                         </div>
                         <div class="style-block">
@@ -74,7 +74,7 @@
         <div id='second-window' class="second-window">
             <div class="block">
                 <h1>Choose what you want:</h1>
-                <div class="style-block">
+                <div class="style-block" id="switch">
                     <form>
                         <label for="table-radio"><input name="switch" id="table-radio" type="radio" value="table"> table</label>
                         <label for="list-radio"><input name="switch" id="list-radio" type="radio" value="list"> list</label>
@@ -86,19 +86,16 @@
                         <label for="count-tr">Count TR: <input id="count-tr" type="text"></label>
                         <label for="count-td">Count TD: <input id="count-td" type="text"></label>
                         <label for="width-td">Width of TD: <input type="text" id='width-td'></label>
-                        <label for="width-td">Width of TD: <input type="text" id='width-td'></label>
+                        <label for="height-td">Height of TD: <input type="text" id='height-td'></label>
                         <div class="border">
-                            <label for="width-border">Width of border :<input type="text" id=""></label>
-                            <label for="border-type">Type of border :<select name="type" id="border-type">
+                            <label for="width-border">Width of border :<input type="text" id="width-border"></label>
+                            <label for="border-type">Type of border :<select class='select' name="type" id="border-type">
                                 <option value="solid">solid</option>
                                 <option value="dotted">dotted</option>
                                 <option value="dashed">dashed</option>
                                 <option value="double">double</option>
-                                <option value="groove">groove</option>
-                                <option value="ridge">ridge</option>
-                                <option value="inset">inset</option>
                             </select> </label>
-                            <label for="border-color">Type of border :<select name="type" id="border-type">
+                            <label for="border-color">Border colors :<select class="select" id="border-color">
                                 <option value="#3b3b3b">black</option>
                                 <option value="#ff7c7c">red</option>
                                 <option value="#fff">white</option>
@@ -108,12 +105,31 @@
                                 <option value="#a6fa92">green</option>
                             </select> </label>
                         </div>
-                        <button class="btn btn-create" id='btn-table'>Create table</button>
+                        <div class="relative">
+                            <span id="notification-table" class="notification"></span>
+                            <button class="btn btn-create" id='btn-table'>Create table</button>
+                        </div>
                     </form>
                 </div>
-                <div class="list" id="list"></div>
+                <div class="list" id="list">
+                    <h4>Add style to your list : </h4>
+                    <form onsubmit='return false'>
+                        <label for="count-li">Count li : <input type="text" id='count-li'></label>
+                        <label for="mark-type">Mark type :<select class='select' id="mark-type">
+                                <option value="circle">circle</option>
+                                <option value="disc">disc</option>
+                                <option value="square">square</option>
+                                <option value="none">none</option>
+                            </select> </label>
+                        <div class='relative'>
+                            <span id="notification-list" class="notification"></span>
+                            <button class="btn btn-create" id='btn-list'>Create list</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+        
     </div>
     <script src="main.js"></script>
 </body>
